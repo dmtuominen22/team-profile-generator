@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "jest": ""
+    "test": "jest --verbose test/*"
   },
   "repository": {
     "type": "git",
