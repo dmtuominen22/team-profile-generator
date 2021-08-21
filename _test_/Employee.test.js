@@ -1,4 +1,7 @@
-const { test } = require('@jest/globals');
-const Emploee = require('../lib/Employee');
+const { expect } = require('@jest/globals');
+const Employee = require('../lib/Employee');
 
-test()
+test('Can get a descriptions of Employee', () => {
+    const employee = new Employee();
+    expect(typeof (employee)).toBe('object');
+});
