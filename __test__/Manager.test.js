@@ -2,7 +2,7 @@ const Manager = require ('../lib/Manager');
 
 test('can get officeNumber via constructor', () => {
     const value = 500;
-    const employee = new Manager('Judy', 'M1245', 'test@test.com', value, 'Manager');
+    const employee = new Manager('Judy', 'M1245', 'test@test.com', value, Manager);
 
     expect(employee.officeNumber).toBe(value);
 });
