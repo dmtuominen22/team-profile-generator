@@ -13,7 +13,7 @@ const promptUser = () => {
     inquirer
         .prompt([
             {
-                type: "input",
+                dtype: "input",
                 name: "name",
                 messsage: "What is the team Members Name?",
                 validate: (nameInput) => {
@@ -27,12 +27,12 @@ const promptUser = () => {
 
             {
                 type: "list",
-                name: "role",
+                // name: "role",
                 messsage: "Select the team member's role?",
                 choices: [
                     "Engineer",
                     "Intern",
-                    "Manager:"
+                    "Manager"
                 ],
 
                 when: ({ confirmRole }) => {
