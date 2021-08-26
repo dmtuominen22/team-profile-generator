@@ -48,8 +48,8 @@ const promptUser = () => {
                 type: "input",
                 name: "id",
                 messsage: "What is the team members ID number?",
-                validate: (nameInput) => {
-                    if (nameInput) {
+                validate: (idInput) => {
+                    if (idInput) {
                         return true;
                     } else {
                         console.log("Please enter the team members ID number!");
@@ -61,8 +61,8 @@ const promptUser = () => {
                 type: "input",
                 name: "email",
                 messsage: "What is the team Members Email Addrss?",
-                validate: (nameInput) => {
-                    if (nameInput) {
+                validate: (emailInput) => {
+                    if (emailInput) {
                         return true;
                     } else {
                         console.log("Please enter the team Manager's Name!");
