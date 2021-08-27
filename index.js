@@ -62,20 +62,8 @@ const promptUser = () => {
                     "Intern",
                     "Manager"
                 ],
-                // validate: ({confirmRole}) => {
-                //     if (confirmRole) {
-                //         return true;
-                //     } else {
-                //         console.log("Please choice your team member's role!");
-                //         return false;
-                //     }
-                // },
-
-            },
+             },
         ])
-
-
-
 
         .then((answers) => {
             console.log(answers);
@@ -106,7 +94,7 @@ function newEmployee() {
 
 }
 
-// TODO: Create a function to write README file
+// TODO: Create a function to write html file
 function writeToFile(data) {
     fs.writeFile("index.html", data, (err) => {
         if (err) throw err;
