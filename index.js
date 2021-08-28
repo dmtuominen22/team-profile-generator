@@ -152,6 +152,7 @@ function writeToFile() {
 <link rel="stylesheet" href="./dist/style.css">
 
         <title>Employee Contact Cards</title>
+
     </head>
     <body>`;
 
@@ -161,7 +162,7 @@ function writeToFile() {
         htmlData += "<p>Email: <a href='mailto:" + card.getEmail()+ "'>" + card.getEmail() + "</a></p>";
         switch (card.getRole()) {
             case "Engineer":
-                htmlData += "<p>GitHUb: " + card.getGithub() + "</p>";
+                htmlData += "<p>GitHub: " + card.getGithub() + "</p>";
                 break;
             case "Intern":
                 htmlData += "<p>School: " + card.getSchool() + "</p>";
