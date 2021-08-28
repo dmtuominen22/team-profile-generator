@@ -3,11 +3,6 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-const Employee = require('./lib/Employee');
-const { resolve } = require("path");
-const { title } = require("process");
-
-
 
 var employees = [];
 
@@ -59,7 +54,6 @@ const promptUser = () => {
                 name: "role",
                 message: "Select the team member's title?",
                 choices: [
-                    "Employee",
                     "Engineer",
                     "Intern",
                     "Manager"
@@ -69,11 +63,6 @@ const promptUser = () => {
 
         .then((answers) => {
             switch (answers.role) {
-                case "Employee":
-                    employees.push(new Employee(answers.name, answers.id, answers.email, answers.role));
-                    console.log(employees);
-                    newEmployee()
-                    break;
                 case "Engineer":
                     inquirer
                         .prompt([{
@@ -149,11 +138,26 @@ function writeToFile() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="./dist/style.css">
+<link rel="stylesheet" href="../temp/style.css">
 
         <title>Employee Contact Cards</title>
     </head>
-    <body>`;
+    <body>
+    <header>
+    <h1>Team Profile</h1>
+    </header>
+  
+<div class="card mx-auto" style="width: 18rem">
+    <h5 class="card-header">Denise Tuminen<br /><br />Engineer</h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">ID:</li>
+        <li class="list-group-item">email</li>
+        <li class="list-group-item">GitHub</li>
+    </ul>
+</div>
+
+
+    `;
 
     for (const card of employees) {
         htmlData += "<div><h2>" + card.getName() + "<br>" + card.getRole() + "</h2>";
@@ -175,7 +179,7 @@ function writeToFile() {
 
     htmlData += `</body></html>`;
 
-    fs.writeFile("index.html", htmlData, (err) => {
+    fs.writeFile("./dist/index.html", htmlData, (err) => {
         if (err) throw err;
 
         console.log("Employee Cards Finished!");
