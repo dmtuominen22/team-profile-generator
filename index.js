@@ -4,10 +4,12 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const Employee = require('./lib/Employee');
+const { resolve } = require("path");
+const { title } = require("process");
 
 
 
-const employees = [];
+var employees = [];
 
 // team member name, employee ID, email address, role
 const promptUser = () => {
@@ -62,40 +64,84 @@ const promptUser = () => {
                     "Intern",
                     "Manager"
                 ],
-             },
+            },
         ])
 
         .then((answers) => {
-            console.log(answers);
-            // generateMarkdown(answers);
-            // let content = generateMarkdown(answers);
-            // writeToFile(content);
+            switch (answers.role) {
+                case "Employee":
+                    employees.push(new Employee(answers.name, answers.id, answers.email, answers.role)); 
+                        console.log(employees);
+                        newEmployee()   
+                    break;
+                case "Engineer":
+                    inquirer 
+                    .prompt([{
+                        type:"input",
+                        name: "github",
+                       message: "please enter your GitHub User Name",
+                    }])
 
-        newEmployee () 
-          
+                    .then((extraAnswers) => {
+                        employees.push(new Engineer(answers.name, answers.id, answers.email, extraAnswers.github, answers.role)); 
+                        console.log(employees);
+                        newEmployee()   
+                    });   
+                    break;
+                case "Intern":
+                    inquirer 
+                    .prompt([{
+                        type:"input",
+                        name: "school",
+                       message: "please enter your School",
+                    }])
+
+                    .then((extraAnswers) => {
+                        employees.push(new Intern(answers.name, answers.id, answers.email, extraAnswers.school, answers.role)); 
+                        console.log(employees);
+                        newEmployee()   
+                    });  
+                     break; 
+                case "Manager":
+                    inquirer 
+                    .prompt([{
+                        type:"input",
+                        name: "officeNumber",
+                       message: "please enter your Office Number",
+                    }])
+
+                    .then((extraAnswers) => {
+                        employees.push(new Manager(answers.name, answers.id, answers.email, extraAnswers.officeNumber, answers.role)); 
+                        console.log(employees);
+                        newEmployee()   
+                    });  
+                    break;
+            }
+
+
         });
 };
 
 function newEmployee() {
-    inquirer .prompt([{
+    inquirer.prompt([{
         name: "newMember",
         type: "confirm",
         message: "Would you like to add more team members?",
     },
-])
-    .then((answers) => {
-        if (answers.newMember){
-            promptUser()
-        
-        }else {
-            writeToFile();
-        }
-    })
+    ])
+        .then((answers) => {
+            if (answers.newMember) {
+                promptUser()
+
+            } else {
+                writeToFile();
+            }
+        })
 
 }
 
 // TODO: Create a function to write html file
-function writeToFile(data) {
+function writeToFile() {
     fs.writeFile("index.html", data, (err) => {
         if (err) throw err;
 
@@ -109,3 +155,4 @@ function init() {
 }
 // Function call to initialize app
 init();
+
