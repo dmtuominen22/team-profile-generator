@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
+const Employee = require("./lib/Employee");
 
 var employees = [];
 
@@ -130,7 +131,7 @@ function newEmployee() {
 }
 
 // TODO: Create a function to write html file
-function writeToFile() {
+function writeToFile(answers) {
     var htmlData = `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -148,16 +149,15 @@ function writeToFile() {
     </header>
   
 <div class="card mx-auto" style="width: 18rem">
-    <h5 class="card-header">Denise Tuminen<br /><br />Engineer</h5>
+    <h5 class="card-header">${this.name}<br /><br />${(this.title)}</h5>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID:</li>
-        <li class="list-group-item">email</li>
-        <li class="list-group-item">GitHub</li>
+        <li class="list-group-item">ID: ${this.id}</li>
+        <li class="list-group-item">email: ${(this.email)} </li>
+        <li class="list-group-item">GitHub: ${(this.github)}</li>
     </ul>
 </div>
 
-
-    `;
+    `
 
     for (const card of employees) {
         htmlData += "<div><h2>" + card.getName() + "<br>" + card.getRole() + "</h2>";
