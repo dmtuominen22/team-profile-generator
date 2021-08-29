@@ -25,6 +25,10 @@
 ## Installations
   You will need to install npm install to have the program run
 
+  here is the link to the video of the test ran for all of the roles.
+https://user-images.githubusercontent.com/84994258/131235217-4212ce0b-360b-40a8-b2f3-2adcfe629bc1.mp4
+
+
 ## Purpose
   This project is usage is to keep track of all your employee, there title, name and email address.  here is an image of the outcome of the questions
 
