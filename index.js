@@ -131,7 +131,7 @@ function newEmployee() {
 }
 
 // TODO: Create a function to write html file
-function writeToFile(answers) {
+function writeToFile() {
     var htmlData = `<!DOCTYPE html>
     <html lang="en">
     <head>
