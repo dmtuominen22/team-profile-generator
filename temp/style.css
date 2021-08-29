@@ -6,8 +6,10 @@
     text-align: center;
     font-size: 36px;
     background-color: rgba(231, 65, 65, 0.808);
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
-  
+  .card {
+display: block;
+  }
