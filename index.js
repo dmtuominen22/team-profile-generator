@@ -67,7 +67,7 @@ const promptUser = () => {
               {
                 type: "input",
                 name: "github",
-                message: "please enter your GitHub User Name",
+                message: "Please enter your GitHub User Name",
               },
             ])
 
@@ -91,7 +91,7 @@ const promptUser = () => {
               {
                 type: "input",
                 name: "school",
-                message: "please enter your School",
+                message: "Please enter your School",
               },
             ])
 
@@ -115,7 +115,7 @@ const promptUser = () => {
               {
                 type: "input",
                 name: "officeNumber",
-                message: "please enter your Office Number",
+                message: "Please enter your Office Number",
               },
             ])
 
