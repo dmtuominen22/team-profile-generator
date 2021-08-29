@@ -17,7 +17,7 @@
   https://github.com/dmtuominen22/team-profile-generator 
 
 ## Website 
-  It is not deployed to a URL
+  It is not deployed to a URL but the URL for the published page is https://dmtuominen22.github.io/team-profile-generator/
 
 ## Languages
   JavaScript, HTML, CSS, jQuery, Bootstrap, Node, jest
