@@ -1,6 +1,6 @@
 
 
-  header h1 {
+header h1 {
     font-weight: bold;
     margin: 55px;
     text-align: center;
@@ -8,20 +8,12 @@
     background-color: rgba(231, 65, 65, 0.808);
     color: rgb(255, 255, 255);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-
+}
 
 .box {
-    float: left; 
-    column-count: wrap; 
-    margin-left: 100px;
-    margin-right: 40px;
-    width: 33%;
-    height: 100px;
+    float: left;
+    margin: 0 40px 20px 100px;
     border-radius: 10px;
     background-color: rgb(207,232,220);
-  }
+}
 
- /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
-    .box: wrap
