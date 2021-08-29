@@ -11,7 +11,8 @@
 * [Contributions](#contributions)
 
 ## Description
-  This project is a command line application that runs in node, you are asked questions about member of your staff and the answers will generate an html file with cards for each employee you enter. 
+  This project is a command line application that runs in node, you are asked questions about member of your staff and the answers will generate an html file with cards for each employee you enter.  Here is an image of the finished cards for 4 employee
+  ![image](https://user-images.githubusercontent.com/84994258/131266166-994fa4f4-051f-450c-b0a5-6d28b26f0a4e.png)
 
 ## GitHub
   https://github.com/dmtuominen22/team-profile-generator 

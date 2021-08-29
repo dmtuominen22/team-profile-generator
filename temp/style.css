@@ -10,6 +10,18 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
-  .card {
-display: block;
+
+.box {
+    float: left; 
+    column-count: wrap; 
+    margin-left: 100px;
+    margin-right: 40px;
+    width: 33%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgb(207,232,220);
   }
+
+ /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    .box: wrap
