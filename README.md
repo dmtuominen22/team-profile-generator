@@ -20,6 +20,9 @@
 ## Website 
   It is not deployed to a URL 
 
+  Here is the video link to it running in the terminal
+  https://user-images.githubusercontent.com/84994258/131766958-0bd173bf-aee0-416c-9d96-fb11ac35cdcf.mp4
+
 ## Languages
   JavaScript, HTML, CSS, jQuery, Bootstrap, Node, jest
 
